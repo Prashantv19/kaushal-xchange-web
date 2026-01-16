@@ -4,15 +4,19 @@ import Explore from "../pages/Explore";
 import MainLayout from "../layout/MainLayout";
 import TeachModule from "../pages/TeachModule";
 
-<Route path="/teach/:skillId" element={<MainLayout><TeachModule /></MainLayout>} />
-
+import Register from "../pages/auth/Register";
+import Login from "../pages/auth/Login";
 
 export default function AppRouter() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+
         <Route path="/" element={<MainLayout><Dashboard /></MainLayout>} />
         <Route path="/explore" element={<MainLayout><Explore /></MainLayout>} />
+        <Route path="/teach/:skillId" element={<MainLayout><TeachModule /></MainLayout>} />
       </Routes>
     </BrowserRouter>
   );
