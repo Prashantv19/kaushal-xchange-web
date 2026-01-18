@@ -7,6 +7,8 @@ import TeachModule from "../pages/TeachModule";
 import Register from "../pages/auth/Register";
 import Login from "../pages/auth/Login";
 
+
+
 export default function AppRouter() {
   return (
     <BrowserRouter>
